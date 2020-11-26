@@ -15,8 +15,8 @@ const usersSlice = createSlice({
       users.list.push(action.payload);
     },
     usersModified: (user, action) => {
-      if (action.payload.name) user.name = action.payload.name;
-      if (action.payload.lastName) user.lastName = action.payload.lastName;
+      if (action.payload.name) user.list.name = action.payload.name;
+      if (action.payload.lastName) user.list.lastName = action.payload.lastName;
     },
     usersRequested: (users) => {
       users.loading = true;
